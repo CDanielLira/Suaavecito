@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar{
+    font-size: 20px;
+}
+
+.navbar .header{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.navbar .header .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.navbar .header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.navbar .header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.navbar .header .nav-links{
+    list-style: none;
+}
+
+.navbar .header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navbar .header .nav-links li:hover,
+.overlay a:hover{
+    transform: scale(1.1);
+}
+
+.navbar .header .nav-links a{
+    font-size: 700;
+    color: darkslategrey;
+}
+
+.navbar .header .nav-links li a:hover{
+    color: aquamarine;
+}
+
+.menu{
+    display: none;
+}
+
+.navbar .header .btn button,
+.navbar .header .menu button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 9px 25px;
+    background: darkslategrey;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar .header .btn button:hover,
+.navbar .header .menu button:hover{
+    background-color: white;
+    color: darkslategray;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px) {
+    .nav-links, .btn{
+        display: none;
+    }
+    .menu{
+        display: inherit;
+    }
+}
+
+/*Nav*/
+
+.navbar .header a{
+    text-decoration: none;
+}
+
+.navbar .header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(47, 79, 79, 0.95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar .header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar .header .overlay a:hover, 
+.navbar .header .overlay a:focus{
+    color: aquamarine;
+}
+
+.navbar .header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+    .navbar .header .overlay a{
+        font-size: 20px;
+    }
+
+    .navbar .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
