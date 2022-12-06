@@ -1,0 +1,28 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');*/
+
+
+.centrar {
+    display: flex;
+    margin: auto;
+    width: 50%;
+}
+
+.azul-claro {
+    background-color: rgb(160,160,255);
+}
+
+.texto-oscuro {
+    color: #050656;
+}
+
+a {
+  transition: background-color .5s;
+}
+
+a:hover {
+  background-color: powderblue;
+}
+
+* {
+    /*font-family: 'Comfortaa', cursive;*/
+}
