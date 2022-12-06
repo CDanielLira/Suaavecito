@@ -1,0 +1,253 @@
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #7d81ff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 600px;
+    background: #7F7FD5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(145, 234, 228, 0.7), rgba(134, 168, 231, 0.7), rgba(127, 127, 213, 0.7)), url(../img/fondo.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(145, 234, 228, 0.7), rgba(134, 168, 231, 0.7), rgba(127, 127, 213, 0.7)), url(../img/fondo.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: whitesmoke;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Bienvenida */
+main .bienvenida{
+    padding: 30px 0 60px 0;
+}
+
+.contenedor-bienvenida{
+    display: flex;
+    justify-content: space-evenly;
+} 
+
+.img-bienvenida{
+    width: 48%;
+}
+
+.bienvenida .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #7d81ff;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+    margin-right: 5px;
+    font-size: 20px
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* Galeria */
+.portafolio{
+    background: #f2f2f2;
+    
+}
+
+.galeria-satis{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-satis{
+    width: 24%;
+    height: 200px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+}
+
+.imagen-satis > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-satis{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(238, 100%, 75%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-satis img{
+    width: 50px
+}
+
+.hover-satis p{
+    color: white;
+}
+
+.imagen-satis:hover .hover-satis{
+    transform: scale(1);
+}
+
+/* Servicios */
+.servicios{
+    padding-bottom: 30px;
+}
+
+.servicio-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-cert{
+    width: 28%;
+    text-align: center;
+}
+
+.servicio-cert img{
+    width: 90%;
+    height: 200px;
+}
+
+.servicio-cert h3{
+    margin: 10px 0;
+}
+
+.servicio-cert h3{
+    margin: 10px 0;
+}
+
+.servicio-cert p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+@media screen and (max-width: 900px){
+    header{
+        background-position: center;
+    }
+    
+    .contenedor-bienvenida{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;   
+    } 
+
+    .bienvenida .contenido-textos{
+        width: 90%;
+    }
+    
+    .img-bienvenida{
+        width: 90%;
+    }
+    
+    .imagen-satis{
+        width: 44%;
+    }
+    
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .servicio-cert{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .servicio-cert:nth-child(1), .servicio-cert:nth-child(2){
+        margin-bottom: 60px;
+    }
+    
+    .servicio-cert img{
+        width: 90%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .textos-header h1{
+        font-size: 35px;
+    }
+    
+    .textos-header h2{
+        font-size: 20px;
+    }
+    
+    .img-bienvenida{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+    
+    .bienvenida .contenido-textos{
+        width: 95%;
+    }
+    
+    .imagen-satis{
+        width: 95%;
+    }
+}
