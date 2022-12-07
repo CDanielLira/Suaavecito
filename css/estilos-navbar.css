@@ -44,10 +44,10 @@
     padding: 0 20px;
 }
 
-.barra .header .nav-links li:hover,
+/*.barra .header .nav-links li:hover,
 .overlay a:hover{
     transform: scale(1.1);
-}
+}*/
 
 .barra .header .nav-links a{
     font-size: 700;
