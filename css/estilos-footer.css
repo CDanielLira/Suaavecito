@@ -54,12 +54,12 @@
 }
 
 .pie-pagina .grupo-1 .red-social a:hover{
-    color: aqua;
+    color: rgb(197, 255, 37);
 }
 
 .pie-pagina .grupo-2{
     /*background-color: #0a1a2a;*/
-    background-color: #000;
+    background-color: rgb(104, 6, 6);
     padding: 15px 10px;
     text-align: center;
     color: white;

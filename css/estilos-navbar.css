@@ -28,6 +28,7 @@
 .barra .header .logo img{
     height: 70px;
     width: auto;
+    border-radius: 50px;
     transition: all 0.3s;
 }
 
@@ -51,11 +52,11 @@
 
 .barra .header .nav-links a{
     font-size: 700;
-    color: darkslategrey;
+    color: rgb(255, 255, 255);
 }
 
 .barra .header .nav-links li a:hover{
-    color: aquamarine;
+    color: rgb(197, 255, 37);
 }
 
 .menu{
@@ -66,9 +67,9 @@
 .barra .header .menu button{
     margin-left: 20px;
     font-weight: 700;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 9px 25px;
-    background: darkslategrey;
+    background: white;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -77,8 +78,8 @@
 
 .barra .header .btn button:hover,
 .barra .header .menu button:hover{
-    background-color: white;
-    color: darkslategray;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(197, 255, 37);
     transform: scale(1.1);
 }
 
@@ -104,7 +105,10 @@
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: rgba(47, 79, 79, 0.95);
+    background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     overflow: hidden;
     transition: all 0.3s ease 0s;
 }
@@ -128,7 +132,7 @@
 
 .barra .header .overlay a:hover, 
 .barra .header .overlay a:focus{
-    color: aquamarine;
+    color: rgb(197, 255, 37);
 }
 
 .barra .header .overlay .close{

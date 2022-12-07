@@ -1,0 +1,46 @@
+.box1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.subconte {
+    width: 38%;
+    height: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: #fff;
+    border-style: outset;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
+.contenedor {
+    width: 100%;
+    padding-top: 70px;
+    background: #7F7FD5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 800px;
+}
+
+.box1 h1 {
+    color: #7d81ff;
+    text-align: center;
+}
+
+.box1 button {
+    background-color: #7d81ff;
+    color: white;
+}
+
+.box1 hr {
+    background-color: #7d81ff;
+    height: 8px;
+}
+
+label{
+    text-decoration: underline;
+    text-decoration-color: #7d81ff;
+}

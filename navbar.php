@@ -28,7 +28,7 @@
                 <li><a href="#">Tienda</a></li>
                 <li><a href="Acerca de.php">Acerca De</a></li>
                 <li><a href="Ayuda.php">Ayuda</a></li>
-                <li><a href="#" class="btn"><button>Contactanos</button></a></li>
+                <li><a href="contacto.php" class="btn"><button>Contactanos</button></a></li>
                 <!-- Si no está en una sesión activa-->
                 <?php
                     if(!empty($_SESSION['id'])) {
@@ -51,11 +51,11 @@
                     //echo "No se puede: " . $_SESSION['id'];
                 ?>
                 <li>
-                    <div class="btn-group">
+                    <div class="btn-group btn">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Iniciar sesión
+                            Inicia sesión
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="background-color: #000; text-align:center;">
                             <li>
                                 <div class="form-group text-center">
                                     <small><a href="ingresar.php" data-toggle="modal" data-target="#modalPassword" class="texto-oscuro">Ingresa a tu cuenta</a></small>
@@ -63,7 +63,7 @@
                             </li>
                             <li>
                                 <div class="form-group text-center">
-                                    <small>¿No tienes una cuenta? Haz clic para <a href="registrar.php" data-toggle="modal" data-target="#modalPassword" class="texto-oscuro">registrar una cuenta</a></small>
+                                    <small>¿No tienes una cuenta? <a href="registrar.php" data-toggle="modal" data-target="#modalPassword" class="texto-oscuro">Registra una cuenta</a></small>
                                 </div>
                             </li>
                         </ul>
@@ -77,11 +77,12 @@
             <div class="overlay" id="mobile-menu">
                 <a onclick="closeNav()" href="" class="close">&times;</a>
                 <div class="overlay-content">
-                    <a href="#">Inicio</a>
+                    <a href="index.php">Inicio</a>
                     <a href="#">Tienda</a>
                     <a href="Acerca de.php">Acerca De</a>
                     <a href="Ayuda.php">Ayuda</a>
-                    <a href="#">Contactanos</a>
+                    <a href="contacto.php">Contactanos</a>
+                    <a href="ingresar.php">Inicia Sesión</a>
                 </div>
             </div>
         </header>
