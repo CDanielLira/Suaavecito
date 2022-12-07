@@ -1,7 +1,6 @@
 <?php 
     require_once "conexion.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,8 +21,8 @@
                 <ul class="nav-links">
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Tienda</a></li>
-                    <li><a href="#">Acerca De</a></li>
-                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="Acerca de.php">Acerca De</a></li>
+                    <li><a href="Ayuda.php">Ayuda</a></li>
                     <li><a href="#" class="btn"><button>Contactanos</button></a></li>
                     <!-- Si no está en una sesión activa-->
                     <?php
@@ -77,8 +76,8 @@
                 <div class="overlay-content">
                     <a href="#">Inicio</a>
                     <a href="#">Tienda</a>
-                    <a href="#">Acerca De</a>
-                    <a href="#">Ayuda</a>
+                    <a href="Acerca de.php">Acerca De</a>
+                    <a href="Ayuda.php">Ayuda</a>
                     <a href="#">Contactanos</a>
                 </div>
             </div>-->
