@@ -29,7 +29,7 @@
             font-weight: bold;
         }
     </style>
-    <?php include "navbar.html"; ?>
+    <?php include "navbar.php"; ?>
 </head>
 
 <body>

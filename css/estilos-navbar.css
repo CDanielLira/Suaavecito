@@ -7,11 +7,11 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.navbar{
+.barra{
     font-size: 20px;
 }
 
-.navbar .header{
+.barra .header{
     background-color: white;
     display: flex;
     justify-content: flex-end;
@@ -20,41 +20,41 @@
     padding: 5px 10%;
 }
 
-.navbar .header .logo{
+.barra .header .logo{
     cursor: pointer;
     margin-right: auto;
 }
 
-.navbar .header .logo img{
+.barra .header .logo img{
     height: 70px;
     width: auto;
     transition: all 0.3s;
 }
 
-.navbar .header .logo img:hover{
+.barra .header .logo img:hover{
     transform: scale(1.2);
 }
 
-.navbar .header .nav-links{
+.barra .header .nav-links{
     list-style: none;
 }
 
-.navbar .header .nav-links li{
+.barra .header .nav-links li{
     display: inline-block;
     padding: 0 20px;
 }
 
-.navbar .header .nav-links li:hover,
+.barra .header .nav-links li:hover,
 .overlay a:hover{
     transform: scale(1.1);
 }
 
-.navbar .header .nav-links a{
+.barra .header .nav-links a{
     font-size: 700;
     color: darkslategrey;
 }
 
-.navbar .header .nav-links li a:hover{
+.barra .header .nav-links li a:hover{
     color: aquamarine;
 }
 
@@ -62,8 +62,8 @@
     display: none;
 }
 
-.navbar .header .btn button,
-.navbar .header .menu button{
+.barra .header .btn button,
+.barra .header .menu button{
     margin-left: 20px;
     font-weight: 700;
     color: white;
@@ -75,8 +75,8 @@
     transition: all 0.3s ease 0s;
 }
 
-.navbar .header .btn button:hover,
-.navbar .header .menu button:hover{
+.barra .header .btn button:hover,
+.barra .header .menu button:hover{
     background-color: white;
     color: darkslategray;
     transform: scale(1.1);
@@ -93,11 +93,11 @@
 
 /*Nav*/
 
-.navbar .header a{
+.barra .header a{
     text-decoration: none;
 }
 
-.navbar .header .overlay{
+.barra .header .overlay{
     height: 100%;
     width: 0;
     position: fixed;
@@ -109,7 +109,7 @@
     transition: all 0.3s ease 0s;
 }
 
-.navbar .header .overlay .overlay-content{
+.barra .header .overlay .overlay-content{
     display: flex;
     height: 100%;
     flex-direction: column;
@@ -117,7 +117,7 @@
     justify-content: center;
 }
 
-.navbar .header .overlay a{
+.barra .header .overlay a{
     padding: 15px;
     font-size: 36px;
     display: block;
@@ -126,12 +126,12 @@
     color: white;
 }
 
-.navbar .header .overlay a:hover, 
-.navbar .header .overlay a:focus{
+.barra .header .overlay a:hover, 
+.barra .header .overlay a:focus{
     color: aquamarine;
 }
 
-.navbar .header .overlay .close{
+.barra .header .overlay .close{
     position: absolute;
     top: 20px;
     right: 45px;
@@ -139,11 +139,11 @@
 }
 
 @media screen and (max-height:450px) {
-    .navbar .header .overlay a{
+    .barra .header .overlay a{
         font-size: 20px;
     }
 
-    .navbar .header .overlay .close{
+    .barra .header .overlay .close{
         font-size: 40px;
         top: 15px;
         right: 35px;
