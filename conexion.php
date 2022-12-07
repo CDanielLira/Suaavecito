@@ -1,9 +1,9 @@
 <?php
     session_start(); 
     $servidor='localhost';
-    $cuentasql='root';
-    $password='';
-    $bd='bdprueba1';
+    $cuentasql='id19971352_suave';
+    $password=' Toros12!suavecito';
+    $bd='id19971352_suaavecito';
 
     if(!empty($_SESSION['cuenta'])){
         $usuario = $_SESSION['cuenta'];
