@@ -15,8 +15,8 @@
 <body>
 <header>
         <section class="textos-header">
-            <h1>Certifícate suavemente</h1>
-            <h2>Con nuestra página 100% confiable</h2>
+            <h1>SUAAVECITO</h1>
+            <h2>Disfruta de una experiencia suave</h2>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
@@ -24,75 +24,104 @@
     </header>
     <main>
         <section class="contenedor bienvenida">
-            <h2 class="titulo">Bienvenidos aspirantes!</h2>
-            <div class="contenedor-bienvenida">
-                <img src="img/b1.jpg" alt="" class="img-bienvenida">
-                <div class="contenido-textos">
-                    <h3><span>1</span>Las mejores certificaciones</h3>
-                    <p>Las certificaciones que ofrecemos son validas en muchas organizaciones en todo el mundo</p>
-                    <h3><span>2</span>Los mejores precios</h3>
-                    <p>En suavecito encuentras los mejores precios del mercado, jamás encontraras una oportunidad así para conseguir esa ansiada certificación</p>
+            <h2 class="titulo">Conoce nuestros productos</h2>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img style="height: 500px;" src="img/vino.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Vino</h5>
+                        <p>Bebida hecha de uva mediante la fermentación alcohólica de su mosto o zumo</p>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img style="height: 500px;" src="img/tequila.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Tequila</h5>
+                        <p>Es un aguardiente elaborado en una región de México. Se produce a partir de la destilación del mosto fermentado obtenido de una planta conocida como "agave azul"</p>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img style="height: 500px;" src="img/whisky.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Whisky</h5>
+                        <p> Es una bebida alcohólica, obtenida por la destilación de la malta fermentada de cereales como cebada, trigo, centeno y maíz, y su posterior añejamiento en barriles de madera</p>
+                    </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
         <section class="portafolio">
             <div class="contenedor">
-                <h2 class="titulo">Clientes satisfechos</h2>
+                <h2 class="titulo">Nuestros productos</h2>
                 <div class="galeria-satis">
                     <div class="imagen-satis">
-                        <img src="img/cl1.jpg" alt="">
+                        <img src="img/dj70.jpg" alt="">
                         <div class="hover-satis">
-                            <img src="img/icon-hover.png" alt="">
-                            <p>Nuestro trabajo</p>
+                            <img src="img/icon-hover1.png" alt="">
+                            <p>Don Julio 70</p>
                         </div>
                     </div>
                     <div class="imagen-satis">
-                        <img src="img/cl2.jpg" alt="">
+                        <img src="img/va.jpg" alt="">
                         <div class="hover-satis">
-                            <img src="img/icon-hover.png" alt="">
-                            <p>Nuestro trabajo</p>
+                            <img src="img/icon-hover1.png" alt="">
+                            <p>Vodka Absolut</p>
                         </div>
                     </div>
                     <div class="imagen-satis">
-                        <img src="img/cl3.jpg" alt="">
+                        <img src="img/jd.jpg" alt="">
                         <div class="hover-satis">
-                            <img src="img/icon-hover.png" alt="">
-                            <p>Nuestro trabajo</p>
+                            <img src="img/icon-hover1.png" alt="">
+                            <p>Jack Daniels's</p>
                         </div>
                     </div>
                     <div class="imagen-satis">
-                        <img src="img/cl4.jpg" alt="">
+                        <img src="img/t10.jpg" alt="">
                         <div class="hover-satis">
-                            <img src="img/icon-hover.png" alt="">
-                            <p>Nuestro trabajo</p>
+                            <img src="img/icon-hover1.png" alt="">
+                            <p>Torres 10</p>
                         </div>
                     </div>
                     <div class="imagen-satis">
-                        <img src="img/cl5.jpg" alt="">
+                        <img src="img/vt.jpg" alt="">
                         <div class="hover-satis">
-                            <img src="img/icon-hover.png" alt="">
-                            <p>Nuestro trabajo</p>
+                            <img src="img/icon-hover2.png" alt="">
+                            <p>Vino Tinto</p>
                         </div>
                     </div>
                     <div class="imagen-satis">
-                        <img src="img/cl6.jpg" alt="">
+                        <img src="img/vb.jpg" alt="">
                         <div class="hover-satis">
-                            <img src="img/icon-hover.png" alt="">
-                            <p>Nuestro trabajo</p>
+                            <img src="img/icon-hover2.png" alt="">
+                            <p>Vino Blanco</p>
                         </div>
                     </div>
                     <div class="imagen-satis">
-                        <img src="img/cl7.jpg" alt="">
+                        <img src="img/vr.jpg" alt="">
                         <div class="hover-satis">
-                            <img src="img/icon-hover.png" alt="">
-                            <p>Nuestro trabajo</p>
+                            <img src="img/icon-hover2.png" alt="">
+                            <p>Vino Rosado</p>
                         </div>
                     </div>
                     <div class="imagen-satis">
-                        <img src="img/cl8.jpg" alt="">
+                        <img src="img/ve.jpg" alt="">
                         <div class="hover-satis">
-                            <img src="img/icon-hover.png" alt="">
-                            <p>Nuestro trabajo</p>
+                            <img src="img/icon-hover2.png" alt="">
+                            <p>Vino Espumoso</p>
                         </div>
                     </div>
                 </div>
@@ -100,22 +129,22 @@
         </section>
         <section class="servicios">
             <div class="contenedor">
-                <h2 class="titulo">Nuestros servicios</h2>
+                <h2 class="titulo">Ofrecemos</h2>
                 <div class="servicio-cont">
                     <div class="servicio-cert">
-                        <img src="img/cert.jpg" alt="">
-                        <h3>Certificaciones</h3>
-                        <p>Ofrecemos certificaciones de distintos lenguajes de programación podras descubrir más en nuestra seccion de información de certificaciones</p>
+                        <img src="img/serv1.png" alt="">
+                        <h3>Calidad</h3>
+                        <p>Contamos con un estricto estandar de calidad, con el que aseguramos tener las mejores marcas, para que con ello puedas disfrutar solo de lo mejor.</p>
                     </div>
                     <div class="servicio-cert">
-                        <img src="img/cert2.jpg" alt="">
-                        <h3>Validez</h3>
-                        <p>Tenemos reconocimiento en todo el mundo, por lo que en cualquier lugar que presentes nuestras certificaciones seguro serán válidas</p>
+                        <img src="img/serv2.png" alt="">
+                        <h3>Rapidez</h3>
+                        <p>Tenemos envios a todo el mundo, con las paqueterías mas rápidas y seguras, para que obtengas tus productos seguros y en el menor tiempo posible.</p>
                     </div>
                     <div class="servicio-cert">
-                        <img src="img/cert3.png" alt="">
+                        <img src="img/serv3.png" alt="">
                         <h3>Variedad</h3>
-                        <p>Contamos con una gran variedad de certificaciones de acuerdo a tus necesidades, con distintos lenguajes de programación para todo tipo de situación</p>
+                        <p>Contamos con una gran variedad de productos, las mejores marcas, todo lo que necesitas para organizar tu reunión o para surtir tu establecimiento.</p>
                     </div>
                 </div>
             </div>
