@@ -2,7 +2,7 @@
     session_start(); 
     /*$servidor='localhost';
     $cuentasql='id19971352_suave';
-    $password=' Toros12!suavecito';
+    $password='Toros12!suavecito';
     $bd='id19971352_suaavecito';*/
 
     $servidor='localhost';
