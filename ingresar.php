@@ -131,7 +131,7 @@
                 </label>
             </div>
         </div>
-        <?php require "Captcha.php"; ?>
+        <?php require "captcha.php"; ?>
         <!--Cambiar a disabled para que se active el captcha-->
         <div class="row">
             <div class="offset-md-4 col-2">
