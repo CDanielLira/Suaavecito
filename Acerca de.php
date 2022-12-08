@@ -14,8 +14,8 @@
             <div class="BOX2">
                 <h1 class="titulos">Acerca de nosotros</h1>
                 <br>
-                <pre>Somos una empresa dedicada a la venta de licores y vinos con gran variedad de marcas y gran variedad 
-de paises que provienen las bebidas.
+                <pre>Somos una tienda dedicada a darte los mejores productos al mejor precio, basados en un alto estandar de calidad, asociados con las mejores marcas y garantizando el mejor de los servicios.
+    Todo a disposición de un clic... además, de que siempre contamos con grandes promociones para que logres ahorrar lo maximo posible y tengas todo lo que deseas. Las mejores bebidas solo las encontrarás aquí..
                 </pre>
                 <img src="img/bar.jpg" alt="" class="bar1">
                 <br><br><br>
