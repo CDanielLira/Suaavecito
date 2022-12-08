@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="contenedor">
+    <header>
         <div class="subconte">
             <form action="enviar.php" class="box1" method="post">
                 <br>
@@ -37,7 +37,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </header>
 </body>
 
 </html>

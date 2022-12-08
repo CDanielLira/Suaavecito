@@ -21,7 +21,7 @@
             <a href="#expertos">Nosotros</a>
         </nav>
         <div class="contenedor head">
-            <h1 class="titulo">Aerca de Suaavecito</h1>
+            <h1 class="titulo">Acerca de Suaavecito</h1>
             <p class="copy">Somos una tienda dedicada a darte los mejores productos al mejor precio, basados en un alto estandar de calidad, asociados con las mejores marcas y garantizando el mejor de los servicios.
                 Todo a disposición de un clic... además, de que siempre contamos con grandes promociones para que logres ahorrar lo maximo posible y tengas todo lo que deseas. Las mejores bebidas solo las encontrarás aquí..</p>
         </div>
@@ -70,15 +70,15 @@
             <h2 class="subtitulo">Nosotros:</h2>
             <section class="experts">
                 <div class="cont-expert">
-                    <img src="img/dani.jpg" alt="">
+                    <img style="height: 300px;" src="img/dani.jpg" alt="">
                     <h3 class="n-expert">Main Developer</h3>
                 </div>
                 <div class="cont-expert">
-                    <img src="img/rafa.jpg" alt="">
+                    <img style="height: 300px;" src="img/rafa.jpg" alt="">
                     <h3 class="n-expert">CEO</h3>
                 </div>
                 <div class="cont-expert">
-                    <img src="img/andrew.jpg" alt="">
+                    <img style="height: 300px;" src="img/andrew.jpg" alt="">
                     <h3 class="n-expert">Staff</h3>
                 </div>
             </section>
