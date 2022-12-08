@@ -14,7 +14,8 @@
     if(!empty($_SESSION['id'])) {
         echo "Bienvenido, " . $_SESSION['nombre'];
         $cuenta = $_SESSION['cuenta'];
-        header( "refresh:1; url=index.php");
+        echo "<script>setTimeout(\"location.href='index.php'\",1000)</script>";
+        //header( "refresh:1; url=index.php");
     }
     else {
         //Si se mando información en el formulario
@@ -47,7 +48,8 @@
                         setcookie('contrasena', '');
                         echo "<br><p>No se estableció ninguna cookie</p>";
                     }
-                    header("Location: index.php");
+                    //header("Location: index.php");
+                    echo "<script>setTimeout(\"location.href='index.php'\",1000)</script>";
                 }
             }
             //Si no genera registros, la contraseña o el usuario está mal. Se le suma un intento si es la contraseña incorrecta
