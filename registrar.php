@@ -85,8 +85,8 @@
         $registrar = "INSERT INTO usuarios (id, nombre, cuenta, correo, contrasena, bloqueada) VALUES ('" . $id . "', '" . $nombre . "', '" . $usuario . "', '" . $correo . "', AES_ENCRYPT('". $password . "', '" . $llave . "'), 0);";
         $resultado = $conexion -> query($registrar);
         echo "Cuenta registrada correctamente. Se te redireccionará al menú automáticamente.<br><a href='index.php'>Ir al menú ahora</a>";
-        header("refresh:3; url=index.php");
-        
+        //header("refresh:3; url=index.php");
+        echo "<script>setTimeout(\"location.href='index.php'\",1000)</script>";
     }
     else {
         if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["password1"] != $_POST["password2"]) {
