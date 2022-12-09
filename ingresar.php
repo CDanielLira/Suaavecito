@@ -79,8 +79,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos-ingresar.css">
     <title>Iniciar sesi&oacute;n</title>
 </head>
+
 
 <body>
     <?php
@@ -111,7 +113,7 @@
         else if($cuenta == 'NO'){
     ?>
 
-    <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>
+        <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>
         <div class="row">
             <div class="offset-md-4 col-2 py-3">
                 <label for="cuenta" class="form-label">Nombre de usuario</label>
@@ -132,16 +134,21 @@
                 </label>
             </div>
         </div>
-        <?php require "captcha.php"; ?>
+        <div class="captcha"> <?php require "captcha.php"; ?></div>
         <!--Cambiar a disabled para que se active el captcha-->
         <div class="row">
             <div class="offset-md-4 col-2">
                 <button type="submit" class="btn btn-outline-primary" id="botonIngresar" value="submit" name="submit" disabled>Ingresar</button> 
             </div>
+            <br>
+            <br> 
         </div>
+        <div class="texto">
+            <label class="form-check-label">¿No tienes una cuenta? <a href="registrar.php">Haz clic aquí</a> para registrarte.</label>
+        </div>
+        <br>
+        <br>
     </form>
-        <label class="form-check-label">¿No tienes una cuenta? <a href="registrar.php">Haz clic aquí</a> para registrarte.</label>
-
     <?php
         }
         else{
