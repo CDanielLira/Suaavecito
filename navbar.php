@@ -50,7 +50,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><i style="color: white;" class="fa-solid fa-cart-shopping"><?php echo $carritoProductos?></i></li>
+                <li><a href="carrito.php"><i style="color: white;" class="fa-solid fa-cart-shopping"><?php echo $carritoProductos?></i></a></li>
                 <?php
                     }
                     else if(!empty($_SESSION['cuenta']) && $usuario == 'admin'){

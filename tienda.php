@@ -84,13 +84,14 @@
     function agregar(id){
         var ind = parseInt(id);
         //window.print(id);
-        window.location.href = "https://suaavecitoo.000webhostapp.com/tienda.php?vr=" + ind;
+        var cate = document.getElementById('categ').innerHTML;
+        window.location.href = "tienda.php?vr=" + ind + "&cat=" + cate;
     }
     
     function vista(id){
         var ind = parseInt(id);
         //window.print(id);
-        window.location.href = "https://suaavecitoo.000webhostapp.com/vistaprod.php?vr=" + ind;
+        window.location.href = "vistaprod.php?prod=" + ind;
     }
 </script>
 
