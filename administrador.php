@@ -5,7 +5,7 @@
    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Graficos</title>
+    <title>Gráficos</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos-administrador.css">
@@ -18,7 +18,7 @@
             <div  class="col-lg-12">
                 <div class="card" style="padding-top: 20px">
                     <div class="card-header centrar">
-                        GRAFICAS ADMINISTRADOR
+                        GRÁFICAS ADMINISTRADOR
                     </div>
                     <div class="card-body">
                         <div class="row centrar">
@@ -52,7 +52,7 @@
    
     function CargarDatosGraficoBar(){
         $.ajax({
-            url:'controlador_grafico1.php',
+            url:'graficas/controlador_grafico1.php',
             type:'POST'
         }).done(function(resp){
             if(resp.length>0){
@@ -72,7 +72,7 @@
     }
     function CargarDatosGraficoBarHorizontal(){
         $.ajax({
-            url:'controlador_grafico2.php',
+            url:'graficas/controlador_grafico2.php',
             type:'POST'
         }).done(function(resp){
             if(resp.length>0){
