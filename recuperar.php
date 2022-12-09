@@ -10,8 +10,6 @@
 
     $llave = "ProyectoProgramacionWeb";
     
-    $conexion = new mysqli($servidor, $cuentasql, $password, $bd);
-    
     if ($conexion->connect_errno){
          die('Error en la conexion');
     }

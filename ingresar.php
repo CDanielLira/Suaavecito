@@ -3,7 +3,6 @@
     require "navbar.php";
 
     $llave = "ProyectoProgramacionWeb";
-    $conexion = new mysqli($servidor, $cuentasql, $password, $bd);
     $cuentaAux = "NO";
 
     if ($conexion->connect_errno){
