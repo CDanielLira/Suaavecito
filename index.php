@@ -30,28 +30,36 @@
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img style="height: 500px;" src="img/vino.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Vino</h5>
-                        <p>Bebida hecha de uva mediante la fermentación alcohólica de su mosto o zumo</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img style="height: 500px;" src="img/tequila.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Tequila</h5>
-                        <p>Es un aguardiente elaborado en una región de México. Se produce a partir de la destilación del mosto fermentado obtenido de una planta conocida como "agave azul"</p>
-                    </div>
+                        <img style="height: 500px;" src="img/vino.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Vino</h5>
+                            <p>Bebida hecha de uva mediante la fermentación alcohólica de su mosto o zumo</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                    <img style="height: 500px;" src="img/whisky.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Whisky</h5>
-                        <p> Es una bebida alcohólica, obtenida por la destilación de la malta fermentada de cereales como cebada, trigo, centeno y maíz, y su posterior añejamiento en barriles de madera</p>
+                        <img style="height: 500px;" src="img/Cupon1.jpeg" class="d-block w-100" alt="...">
                     </div>
+                    <div class="carousel-item">
+                        <img style="height: 500px;" src="img/tequila.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Tequila</h5>
+                            <p>Es un aguardiente elaborado en una región de México. Se produce a partir de la destilación del mosto fermentado obtenido de una planta conocida como "agave azul"</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img style="height: 500px;" src="img/Cupon2.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img style="height: 500px;" src="img/whisky.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Whisky</h5>
+                            <p> Es una bebida alcohólica, obtenida por la destilación de la malta fermentada de cereales como cebada, trigo, centeno y maíz, y su posterior añejamiento en barriles de madera</p>
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -146,6 +154,25 @@
                         <h3>Variedad</h3>
                         <p>Contamos con una gran variedad de productos, las mejores marcas, todo lo que necesitas para organizar tu reunión o para surtir tu establecimiento.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Suscribete ahora!</h2>
+                <div class="suscribete">
+                <form action="enviarCupon.php" class="row row-cols-lg-auto g-3 align-items-center" method="POST">
+                    <div class="col-12">
+                        <label class="visually-hidden" for="inlineFormInputGroupUsername">Correo electrónico</label>
+                        <div class="input-group">
+                        <div class="input-group-text">@</div>
+                        <input name="correo" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Correo electrónico">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary boton">Suscribete</button>
+                    </div>
+                </form>
                 </div>
             </div>
         </section>

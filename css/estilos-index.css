@@ -185,6 +185,29 @@ main .bienvenida{
     text-align: justify;
 }
 
+/*Suscribete*/
+.suscribete{
+    display: flex;
+    justify-content: center;
+}
+
+.suscribete .boton{
+    margin-left: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    padding: 9px 25px;
+    background: #dd1818;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.suscribete .boton:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: #dd1818;
+    transform: scale(1.1);
+}
 @media screen and (max-width: 900px){
     header{
         background-position: center;
