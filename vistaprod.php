@@ -5,13 +5,18 @@
     $prod = $_GET['prod'];
     $sql = "select * from productos where idproducto = '$prod'";
     $resultado = $conexion -> query($sql);
-    $idprod = $_GET['val'];
+    $idprod = $_GET['prod'];
     if(!empty($idprod)){
         $sql2 = "INSERT INTO carrito (idus, idprod) VALUES ('$usuario', '$idprod') ";
         $conexion -> query($sql2);
         if ($conexion->affected_rows >= 1){ //revisamos que se inserto un registro
-                echo '<script> alert("registro insertado") </script>';
+                //echo '<script> alert("registro insertado") </script>';
         }//fin
+        $existencia = $conexion -> query("Select existencia from productos where idproducto='$idprod'");
+        $existencia = $existencia->fetch_assoc();
+        $existencia = $existencia['existencia'];
+        $existencia--;
+        $conexion->query("UPDATE productos SET existencia='" .$existencia . "' WHERE idproducto='" . $idprod . "';");
     }
 
     
@@ -40,12 +45,14 @@
     <br>
     <div class="row">
         <?php
+            $resultado = $conexion -> query($sql);
             while( $fila = $resultado ->  fetch_assoc()){
                 $id = $fila['idproducto'];
                 $nombre = $fila['nombre'];
                 $precio = $fila['precio'];
                 $imagen = $fila['imagen'];
                 $des = $fila['descripcion'];
+                $existencia = $fila['existencia'];
         ?>
                 <div class="card" style="width: 100rem;">
                   <div class="row no-gutters">
@@ -57,7 +64,20 @@
                         <h5 class="card-title" style>-<?php echo $nombre ?></h5>
                         
                         <p class="card-text"><?php echo $des ?></p>
-                        <p class="card-text"><big >$<?php echo $precio ?></big> <button class="btn btn-primary" id="<?php echo $id ?>" onclick="agregar(this.id)">Seleccionar</button></p>
+                        <p class="card-text"><strong>$<?php echo $precio ?></strong> 
+                        <?php
+                            echo "<h5>Disponibles: " . $existencia . "</h5>";
+							if(!empty($_SESSION['id']) && $existencia > 0){
+								?><button class="btn btn-primary" onclick="agregar()">Agregar al carrito</button><?php
+							}
+							else if(!empty($_SESSION['id']) && $existencia <= 0){
+								?><button class="btn btn-secondary">No disponible</button><?php
+							}
+							else{
+								?><a href="ingresar.php" class="btn btn-secondary">Iniciar sesión</a><?php
+							}
+                        ?>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -74,10 +94,8 @@
 
 
 <script>   
-    function agregar(id){
-        var ind = parseInt(id);
-        //window.print(id);
-        window.location.href = window.location.href + "?val=" + ind;
+    function agregar(){
+        window.location.href = window.location.href;
     }
 </script>
 
