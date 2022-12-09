@@ -24,13 +24,19 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="#">Tienda</a></li>
+                <li><a href="tienda.php">Tienda</a></li>
                 <li><a href="Acerca de.php">Acerca De</a></li>
                 <li><a href="Ayuda.php">Ayuda</a></li>
                 <li><a href="contacto.php" class="btn"><button>Contáctanos</button></a></li>
                 <!-- Si no está en una sesión activa-->
                 <?php
                     if(!empty($_SESSION['id']) && $usuario != 'admin') {
+                        $carritoProductos = 0;
+                        $resultado = $conexion -> query("SELECT COUNT(*) AS total FROM carrito WHERE idus='" . $usuario . "';");
+                        if ($resultado -> num_rows) {
+                            $resultado = $resultado -> fetch_assoc();
+                            $carritoProductos = $resultado['total'];
+                        }
                 ?>
                 <li>
                     <div class="btn-group btn">
@@ -44,7 +50,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><i style="color: white;" class="fa-solid fa-cart-shopping">0</i></li>
+                <li><i style="color: white;" class="fa-solid fa-cart-shopping"><?php echo $carritoProductos?></i></li>
                 <?php
                     }
                     else if(!empty($_SESSION['cuenta']) && $usuario == 'admin'){
