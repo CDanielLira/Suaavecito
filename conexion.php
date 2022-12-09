@@ -10,6 +10,8 @@
     $password='';
     $bd='bdprueba1';*/
 
+    $conexion = new mysqli($servidor, $cuentasql, $password, $bd);
+
     if(!empty($_SESSION['cuenta'])){
         $cuenta = $_SESSION['cuenta'];
         $usuario = $_SESSION['cuenta'];
