@@ -34,10 +34,10 @@
         public $conexion;
         public function __construct(){
             
-            $this->$servidor='localhost';
-            $this->$cuentasql='id19971352_suave';
-            $this->$password='Toros12!suavecito';
-            $this->$bd='id19971352_suaavecito';
+            $this->servidor='localhost';
+            $this->cuentasql='id19971352_suave';
+            $this->password='Toros12!suavecito';
+            $this->bd='id19971352_suaavecito';
             
             /*$this->servidor = "localhost";
             $this->cuentasql = "root";
