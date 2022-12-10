@@ -11,6 +11,10 @@
     $bd='bdprueba1';*/
 
     $conexion = new mysqli($servidor, $cuentasql, $password, $bd);
+    
+    if ($conexion->connect_errno){
+        die('Error en la conexion');
+    }
 
     if(!empty($_SESSION['cuenta'])){
         $cuenta = $_SESSION['cuenta'];
