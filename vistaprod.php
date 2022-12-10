@@ -5,8 +5,8 @@
     $prod = $_GET['prod'];
     $sql = "select * from productos where idproducto = '$prod'";
     $resultado = $conexion -> query($sql);
-    $idprod = $_GET['prod'];
-    if(!empty($idprod)){
+    if(!empty($_GET['add'])){
+        $idprod = $_GET['prod'];
         $sql2 = "INSERT INTO carrito (idus, idprod) VALUES ('$usuario', '$idprod') ";
         $conexion -> query($sql2);
         if ($conexion->affected_rows >= 1){ //revisamos que se inserto un registro
@@ -17,6 +17,7 @@
         $existencia = $existencia['existencia'];
         $existencia--;
         $conexion->query("UPDATE productos SET existencia='" .$existencia . "' WHERE idproducto='" . $idprod . "';");
+        echo "<script>setTimeout(\"location.href='vistaprod.php?prod=" .$prod. "'\",1)</script>";
     }
 
     
@@ -24,21 +25,7 @@
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<body>
-    <div class="cate">
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link disabled">Todos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="licores.php">Licores</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vinos.php">Vinos</a>
-          </li>
-        </ul>
-    </div>
-    
+<body>    
 
 <div class="container">
     <br>
@@ -95,7 +82,7 @@
 
 <script>   
     function agregar(){
-        window.location.href = window.location.href;
+        window.location.href = window.location.href + "&add=si";
     }
 </script>
 
