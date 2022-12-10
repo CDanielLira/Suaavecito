@@ -14,7 +14,7 @@
         <div class="subconte">
             <form action="enviar.php" class="box1" method="post">
                 <br>
-                <h1>CONTACTANOS</h1>
+                <h1>CONTÁCTANOS</h1>
                 <hr>
                 <div class="mb-3">
                     <label for="n" class="form-label">Nombre</label>

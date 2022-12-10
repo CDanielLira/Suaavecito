@@ -159,7 +159,7 @@
         </section>
         <section class="portafolio">
             <div class="contenedor">
-                <h2 class="titulo">Suscribete ahora!</h2>
+                <h2 class="titulo">¡Suscríbete ahora!</h2>
                 <div class="suscribete">
                 <form action="enviarCupon.php" class="row row-cols-lg-auto g-3 align-items-center" method="POST">
                     <div class="col-12">
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary boton">Suscribete</button>
+                        <button type="submit" class="btn btn-primary boton">Suscríbete</button>
                     </div>
                 </form>
                 </div>
