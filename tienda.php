@@ -74,6 +74,7 @@
                 $nombre = $fila['nombre'];
                 $precio = $fila['precio'];
                 $imagen = $fila['imagen'];
+                $descuento = $fila['descuento'];
                 $existencia = $fila['existencia'];
                 $categoria = $fila['categoria'];
                 if($cat == "Todos" || $categoria == $cat) {
@@ -83,11 +84,17 @@
 
             </script>
             <div class="card" style="width: 22rem; margin: 0 auto;">
-
-                <!--<img onclick="" class="card-img-top" width="250" height="250" src="data:imagen/jpeg;base64,<?php echo base64_encode($fila['imagen']);?>"/>-->
+            
                 <img id="<?php echo $id ?>" onclick="vista(this.id)" class="card-img-top" width="16rem" src="data:imagen/jpeg;base64,<?php echo base64_encode($fila['imagen']);?>" />
                 <div>
-                    <h5>$<?php echo $precio ?></h5>
+                    <h5><?php 
+                        if($descuento == 0)
+                            echo '$' . $precio;
+                        else {
+                            echo "<span style='text-decoration:line-through;'>$". $precio ."</span>";
+                            echo " $" . $precio - $descuento;
+                        }
+                    ?></h5>
                     <p><?php echo $nombre ?></p>
                     <?php
                                     echo "<h6>Disponibles: " . $existencia . "</h6>";
