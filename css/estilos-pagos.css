@@ -1,0 +1,103 @@
+header{
+    background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818a1, #333333a1), url(../img/bar2.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818a1, #333333a1), url(../img/bar2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.contenedor form {
+    padding: 20px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.contenedor form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contenedor form .row .col {
+    flex: 1 1 250px;
+}
+
+.contenedor form .row .col .title {
+    font-size: 20px;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.contenedor form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.contenedor form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contenedor form .row .col .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.contenedor form .row .col .inputBox input:focus {
+    border: 1px solid #000;
+}
+
+.contenedor form .row .col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.contenedor form .row .col .flex .inputBox {
+    margin-top: 5px;
+}
+
+.container form .row .col .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.contenedor form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background-color: #dd1818;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+.contenedor form .submit-btn:hover {
+    background: #2ecc7000;
+    color: #dd1818;
+}
+
+.contenedor form .row .product{
+    font-size: 25px;
+    text-align: center;
+    color: #dd1818;
+}
+
+.contenedor form .row p{
+    font-size: 15px;
+    text-align: center;
+}
