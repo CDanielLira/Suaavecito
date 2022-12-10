@@ -30,11 +30,12 @@
 <body>
     <p id="categ" hidden><?php echo $cat?></p>
     <div class="cate">
+        <hr class="border border-danger border-3 opacity-0">
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <?php
                 if($cat == "Todos")
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Todos' role='button'>Todos</a>";
+                    echo "<a class='btn btn-outline-danger' style='pointer-events: none;' href='tienda.php?cat=Todos' role='button' disabled>Todos</a>";
                 else
                     echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Todos' role='button'>Todos</a>";
             ?>
@@ -42,7 +43,7 @@
             <li class="nav-item">
                 <?php
                 if($cat == "Licores")
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Licores' role='button'>Licores</a>";
+                    echo "<a class='btn btn-outline-danger' style='pointer-events: none;' href='tienda.php?cat=Licores' role='button' disabled>Licores</a>";
                 else
                     echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Licores' role='button'>Licores</a>";
             ?>
@@ -50,7 +51,7 @@
             <li class="nav-item">
                 <?php
                 if($cat == "Vinos")
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Vinos' role='button'>Vinos</a>";
+                    echo "<a class='btn btn-outline-danger' style='pointer-events: none;' href='tienda.php?cat=Vinos' role='button' disabled>Vinos</a>";
                 else
                     echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Vinos' role='button'>Vinos</a>";
             ?>
@@ -121,13 +122,13 @@
         var ind = parseInt(id);
         //window.print(id);
         var cate = document.getElementById('categ').innerHTML;
-        window.location.href = "https://suaavecitoo.000webhostapp.com/tienda.php?vr=" + ind + "&cat=" + cate;
+        window.location.href = "tienda.php?vr=" + ind + "&cat=" + cate;
     }
 
     function vista(id) {
         var ind = parseInt(id);
         //window.print(id);
-        window.location.href = "https://suaavecitoo.000webhostapp.com/vistaprod.php?prod=" + ind;
+        window.location.href = "vistaprod.php?prod=" + ind;
     }
 
 </script>

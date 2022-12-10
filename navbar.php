@@ -20,7 +20,7 @@
     <div class="barra">
         <header class="header">
             <div class="logo">
-                <img src="img/logo.jpeg" alt="logo de la tienda">
+                <a href="index.php"><img src="img/logo.jpeg" alt="logo de la tienda"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.php">Inicio</a></li>
@@ -63,6 +63,15 @@
                         <ul class="dropdown-menu" style="background-color: #6e1313; text-align:center;">
                             <li>
                                 <a href="administrador.php">Ver gráficas</a>
+                            </li>
+                            <li>
+                                <a href="#">Nuevo producto</a>
+                            </li>
+                            <li>
+                                <a href="#">Modificar producto</a>
+                            </li>
+                            <li>
+                                <a href="#">Eliminar producto</a>
                             </li>
                             <li>
                                 <a href="logout.php">Salir de la cuenta</a>

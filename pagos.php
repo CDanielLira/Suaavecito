@@ -1,4 +1,17 @@
-<?php include "navbar.php" ?>
+<?php include "navbar.php";
+    $sql = "select * from carrito where idus = '$usuario'";
+    $resultado = $conexion -> query($sql);
+    $total = 0;
+    while($fila = $resultado -> fetch_assoc()){
+        $id = $fila['idprod'];
+        $sql3 = "select * from productos where idproducto = '$id'";
+        $resultado3 = $conexion -> query($sql3);
+        while( $fila2 = $resultado3 -> fetch_assoc()){
+            $total += $fila2['precio'];
+        }
+    }//fin while
+
+?>
 <html lang="es">
 
 <head>
@@ -14,7 +27,7 @@
     <div class="contenedor">
         <form action="examen.php">
            <div class="row">
-               <h3 class="product">PAGO CON TARJETA</h3>
+               <h3 class="product">PAGO CON TARJETA <?php echo $_POST['tarjeta']?></h3>
                <p>Usted esta realizando la compra de sus <b>productos</b></p>
                <hr>
            </div>
@@ -23,11 +36,11 @@
                     <h3 class="title">Dirección de Envio</h3>
                     <div class="inputBox">
                         <span>Nombre completo :</span>
-                        <input type="text" placeholder="Martin García" required>
+                        <input type="text" value="<?php echo $nombre?>" required>
                     </div>
                     <div class="inputBox">
                         <span>E-mail :</span>
-                        <input type="email" placeholder="ejemplo@ejemplo.com" required>
+                        <input type="email" value="<?php echo $correo?>" required>
                     </div>
                     <div class="inputBox">
                         <span>Dirección :</span>
@@ -52,12 +65,10 @@
                 <div class="col">
                     <h3 class="title">Forma de Pago</h3>
                     <div class="inputBox">
-                        <span>Tarjetas Aceptadas :</span>
-                        <img src="img/card_img.png" alt="">
                     </div>
                     <div class="inputBox">
                         <span>Nombre en la Tarjeta :</span>
-                        <input type="text" placeholder="Martin G." required>
+                        <input type="text" value="<?php echo $nombre?>" required>
                     </div>
                     <div class="inputBox">
                         <span>Numero de Tarjeta de Credito :</span>
@@ -78,9 +89,70 @@
                             <input type="text" placeholder="1234" required>
                         </div>
                     </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                        <h6><?php
+                                if($total >= 299){
+                                    echo "¡Tienes envío gratuito!";
+                                }
+                                else {
+                                    echo "¡Añade $" . 299 - $total . " más a tu carrito para tener envío gratuito!";
+                                    $total += 99;
+                                }
+                            ?></h6>
+                        </div>
+                        <div class="inputBox">
+
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <h6><?php
+                                if(!empty($_POST['cupon']) && $total < 100){
+                                    echo "¡Añade más productos a tu carrito para hacer válido el cupón!";
+                                    $descuento = 0;
+                                }
+                                else if(!empty($_POST['cupon']) && $_POST['cupon'] == "SUAAVECITO10") {
+                                    echo "¡Tienes un descuento de 10% sobre el total!";
+                                    $descuento = 10;
+                                }
+                                else if(!empty($_POST['cupon']) && $_POST['cupon'] == "SUAAVECITO20") {
+                                    echo "¡Tienes un descuento de 20% sobre el total!";
+                                    $descuento = 20;
+                                }
+                                else if(!empty($_POST['cupon']) && $_POST['cupon'] == "SUAAVECITO100") {
+                                    echo "¡Tienes un descuento de $100 sobre el total!";
+                                    $descuento = 100;
+                                }
+                                else {
+                                    $descuento = 0;
+                                    echo "No ingresaste ningún cupón";
+                                }
+                            ?></h6>
+                        </div>
+                        <div class="inputBox">
+                            <h6><?php
+                                if($descuento == 10 || $descuento == 20) {
+                                    echo "<span style='text-decoration:line-through;'>$". $total ."</span>";
+                                    $total -= ($descuento / 100) * $total;
+                                    echo "<span><h5>$". $total ."</h5></span>";
+                                }
+                                else if($descuento == 100) {
+                                    echo "<span style='text-decoration:line-through;'>$". $total ."</span>";
+                                    $total -= 100;
+                                    echo "<span><h5>$". $total ."</h5></span>";
+                                }
+                                else {
+                                    echo "<span><h5>$". $total ."</h5></span>";
+                                }
+                            ?></h6>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <input type="submit" value="Continuar compra" class="submit-btn">
+            <input type="submit" value="Finalizar compra" class="submit-btn">
         </form>
     </div>
     </header>

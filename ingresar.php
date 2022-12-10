@@ -19,8 +19,8 @@
     else {
         //Si se mando información en el formulario
         if($_SERVER["REQUEST_METHOD"] == "POST") {
-            $cuentaAux = $_POST["cuenta"];
-            $cuenta = $_POST["cuenta"];
+            $cuentaAux = $_POST["usuario"];
+            $cuenta = $_POST["usuario"];
             $contrasena = $_POST['contrasena'];
             
             $consulta = "select * from usuarios where cuenta='" . $cuenta . "' && cast(aes_decrypt(contrasena, '" . $llave . "') as char)='" . $contrasena . "';";
@@ -116,8 +116,8 @@
         <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>
         <div class="row">
             <div class="offset-md-4 col-2 py-3">
-                <label for="cuenta" class="form-label">Nombre de usuario</label>
-                <input type="text" class="form-control" id="cuenta" name="cuenta" value="<?php if(isset($_COOKIE['usuario'])) echo $_COOKIE['usuario']; ?>" required>
+                <label for="usuario" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" value="<?php if(isset($_COOKIE['usuario'])) echo $_COOKIE['usuario']; ?>" required>
             </div>
         </div>
         <div class="row">

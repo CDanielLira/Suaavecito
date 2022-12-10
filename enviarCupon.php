@@ -9,9 +9,9 @@
     $destino = $_POST['correo'];
     $asunto = "Cupon de Descuento";
     $mensaje = "<h1>Felicidades</h1>
-                <p>Acabas de recibir un codigo de descuento que podras aplicar en tus siguientes compras</p><br>
-                <p>Usa el codigo: <b>SUAAVECITO05</b> y obtentdrás un descuento del 5% en tus compras</p><br>
-                <p>Att. equipo de trabajo SUAAVECITO</p>";
+                <p>Acabas de recibir un codigo de descuento que podras aplicar en tu primer compra</p><br>
+                <p>Usa el codigo: <b>SUAAVECITO100</b> y obtendrás un descuento de $100 en tu primer compra</p><br>
+                <p>Att. Equipo de trabajo SUAAVECITO</p>";
 
     $mail = new PHPMailer();
     

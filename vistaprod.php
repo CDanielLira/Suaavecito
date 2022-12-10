@@ -5,8 +5,8 @@
     $prod = $_GET['prod'];
     $sql = "select * from productos where idproducto = '$prod'";
     $resultado = $conexion -> query($sql);
-    $idprod = $_GET['prod'];
-    if(!empty($idprod)){
+    if(!empty($_GET['add'])){
+        $idprod = $_GET['prod'];
         $sql2 = "INSERT INTO carrito (idus, idprod) VALUES ('$usuario', '$idprod') ";
         $conexion -> query($sql2);
         if ($conexion->affected_rows >= 1){ //revisamos que se inserto un registro
@@ -17,6 +17,7 @@
         $existencia = $existencia['existencia'];
         $existencia--;
         $conexion->query("UPDATE productos SET existencia='" .$existencia . "' WHERE idproducto='" . $idprod . "';");
+        echo "<script>setTimeout(\"location.href='vistaprod.php?prod=" .$prod. "'\",1)</script>";
     }
 
     
@@ -25,35 +26,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <body>
-    <div class="cate">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <?php
-                if($cat == "Todos")
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Todos' role='button'>Todos</a>";
-                else
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Todos' role='button'>Todos</a>";
-            ?>
-            </li>
-            <li class="nav-item">
-                <?php
-                if($cat == "Licores")
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Licores' role='button'>Licores</a>";
-                else
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Licores' role='button'>Licores</a>";
-            ?>
-            </li>
-            <li class="nav-item">
-                <?php
-                if($cat == "Vinos")
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Vinos' role='button'>Vinos</a>";
-                else
-                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Vinos' role='button'>Vinos</a>";
-            ?>
-            </li>
-        </ul>
-    </div>
-    
 
 <div class="container">
     <br>
@@ -110,7 +82,7 @@
 
 <script>   
     function agregar(){
-        window.location.href = window.location.href;
+        window.location.href = window.location.href + "&add=si";
     }
 </script>
 
