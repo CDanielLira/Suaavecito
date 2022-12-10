@@ -45,6 +45,9 @@
                         </button>
                         <ul class="dropdown-menu" style="background: #6e1313; text-align:center;">
                             <li>
+                                <a href="carrito.php">Ir al carrito</a>
+                            </li>
+                            <li>
                                 <a href="logout.php">Salir de la cuenta</a>
                             </li>
                         </ul>
@@ -65,13 +68,13 @@
                                 <a href="administrador.php">Ver gráficas</a>
                             </li>
                             <li>
-                                <a href="#">Nuevo producto</a>
+                                <a href="altaproducto.php">Nuevo producto</a>
                             </li>
                             <li>
-                                <a href="#">Modificar producto</a>
+                                <a href="modifica.php">Modificar producto</a>
                             </li>
                             <li>
-                                <a href="#">Eliminar producto</a>
+                                <a href="eliminaproducto.php">Eliminar producto</a>
                             </li>
                             <li>
                                 <a href="logout.php">Salir de la cuenta</a>
