@@ -47,7 +47,6 @@
                         <p>Nuestro objetivo es ser la tienda de licores y vinos en linea mas grande del mundo</p>
                     </div>
                 </div>
-<<<<<<< HEAD
                 <br>
                 <h3 class="titulos">Vision</h3>
                 <pre>"Nuestra vision es proporcionar la cultura y tradicion del mundo".</pre>

@@ -13,12 +13,6 @@
 
 <body>
     <header class="header" id="inicio">
-        <img class="hamburguer" src="img/bx-menu-alt-right.svg" alt="">
-        <nav class="menu-navegacion">
-            <a href="#inicio">Introduccion</a>
-            <a href="#servicio">Valores</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#expertos">Nosotros</a>
         </nav>
         <div class="contenedor head">
             <h1 class="titulo">AYUDA</h1>
