@@ -60,21 +60,27 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Elige un método de pago</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h4>¡Estás a un paso de finalizar tu compra!</h4>
-                <h5>Selecciona el método de pago para continuar</h5>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="pagar()">Tarjeta1</button>
-                <button type="button" class="btn btn-primary" onclick="pagar()">Tarjeta2</button>
-                <button type="button" class="btn btn-danger" onclick="pagar()">OXXO</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            </div>
-            </div>
+                <form  action="pagos.php" method="post">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Elige un método de pago</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>¡Estás a un paso de finalizar tu compra!</h4>
+                        <hr class="border border-danger border-1 opacity-0">
+                        <h5>¿Tienes un cupón de descuento?</h5>
+                        <h5>Ingrésalo aquí: <h6><input type="text" name="cupon"></h6></h5>
+                        <hr class="border border-danger border-1 opacity-0">
+                        <h5>Selecciona el método de pago para continuar</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button submit" class="btn btn-primary" name="tarjeta" value="VISA">Visa</button>
+                        <button type="button submit" class="btn btn-primary" name="tarjeta" value="MASTERCARD">Mastercard</button>
+                        <button type="button submit" class="btn btn-danger" name="tarjeta" value="OXXO">OXXO</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <br>
@@ -104,10 +110,6 @@
         window.location.href = "vistaprod.php?vr=" + ind;
     }
     
-   function pagar(){
-        //window.location.href = "metpago.php";
-        document.write("Falta agregar esta página");
-    }
 </script>
 
 <?php
