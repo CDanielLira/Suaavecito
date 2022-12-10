@@ -9,7 +9,7 @@
     use PHPMailer\PHPMailer\Exception;
 
     $llave = "ProyectoProgramacionWeb";
-    
+    $conexion = new mysqli($servidor, $cuentasql, $password, $bd);
     if ($conexion->connect_errno){
          die('Error en la conexion');
     }
@@ -29,7 +29,6 @@
     }
     else {
         if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['codigo'] == $_POST['contrasena'] && $_POST["password1"] == $_POST["password2"]) {
-            //UPDATE usuarios SET contrasena=AES_ENCRYPT('contra', 'ProyectoProgramacionWeb') WHERE cuenta='FabianME';
             $conexion->query("UPDATE usuarios SET contrasena=AES_ENCRYPT('" . $_POST['password1'] . "', '" . $llave ."') WHERE cuenta='" . $_POST["cuenta"] . "';");
             $conexion->query("UPDATE usuarios SET intentos=0, bloqueada=0 WHERE cuenta='" . $_POST["cuenta"] . "';");
         }

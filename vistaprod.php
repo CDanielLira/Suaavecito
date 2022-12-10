@@ -56,7 +56,7 @@
                             echo '$' . $precio;
                         else {
                             echo "<span style='text-decoration:line-through;'>$". $precio ."</span>";
-                            echo " $" . $precio - $descuento;
+                            echo " $" . ($precio - $descuento);
                         }
                     ?></h5>
                         <?php

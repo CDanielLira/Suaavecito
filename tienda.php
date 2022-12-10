@@ -9,7 +9,7 @@
         $sql2 = "INSERT INTO carrito (idus, idprod) VALUES ('$usuario', '$idprod') ";
         $conexion -> query($sql2);
         if ($conexion->affected_rows >= 1){ //revisamos que se inserto un registro
-                echo '<script> alert("registro insertado") </script>';
+                //echo '<script> alert("registro insertado") </script>';
         }//fin
         $existencia = $conexion -> query("Select existencia from productos where idproducto='$idprod'");
         $existencia = $existencia->fetch_assoc();
@@ -92,22 +92,22 @@
                             echo '$' . $precio;
                         else {
                             echo "<span style='text-decoration:line-through;'>$". $precio ."</span>";
-                            echo " $" . $precio - $descuento;
+                            echo " $" . ($precio - $descuento);
                         }
                     ?></h5>
                     <p><?php echo $nombre ?></p>
                     <?php
-                                    echo "<h6>Disponibles: " . $existencia . "</h6>";
-                                    if(!empty($_SESSION['id']) && $existencia > 0){
-                                        ?><button class="btn btn-outline-danger" id="<?php echo $id ?>" onclick="agregar(this.id)">Agregar al carrito</button><?php
-                                    }
-                                    else if(!empty($_SESSION['id']) && $existencia <= 0){
-                                        ?><button class="btn btn-secondary">No disponible</button><?php
-                                    }
-                                    else{
-                                        ?><a href="ingresar.php" class="btn btn-secondary">Iniciar sesión</a><?php
-                                    }
-                                ?>
+                        echo "<h6>Disponibles: " . $existencia . "</h6>";
+                        if(!empty($_SESSION['id']) && $existencia > 0){
+                            ?><button class="btn btn-outline-danger" id="<?php echo $id ?>" onclick="agregar(this.id)">Agregar al carrito</button><?php
+                        }
+                        else if(!empty($_SESSION['id']) && $existencia <= 0){
+                            ?><button class="btn btn-secondary">No disponible</button><?php
+                        }
+                        else{
+                            ?><a href="ingresar.php" class="btn btn-secondary">Iniciar sesión</a><?php
+                        }
+                    ?>
                 </div>
 
                 <br>
@@ -121,8 +121,6 @@
         <br>
     </div>
 </body>
-
-
 
 <script>
     function agregar(id) {

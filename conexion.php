@@ -21,7 +21,6 @@
         $usuario = $_SESSION['cuenta'];
         $nombre = $_SESSION['nombre'];
         $correo = $_SESSION['correo'];
-        //$carrito = $_SESSION['carrito'];
     }
     else {
         $cuenta = "NO";
