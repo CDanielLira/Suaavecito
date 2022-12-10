@@ -2,13 +2,6 @@
     
     require "navbar.php";
     require_once "conexion.php";
-    $servidor='localhost';
-    $cuenta='id19971352_suave';
-    $password='Toros12!suavecito';
-    $bd='id19971352_suaavecito';
-     
-    //conexion a la base de datos
-    $conexion = new mysqli($servidor,$cuenta,$password,$bd);
 
     if ($conexion->connect_errno){
          die('Error en la conexion');
@@ -36,7 +29,7 @@
                 $prec = $_POST['precio'];
                 
                 //hacemos cadena con la sentencia mysql para insertar datos
-                $sql = "INSERT INTO productos (idproducto, nombre, categoria, descripcion, existencia, precio, imagen) VALUES('$id','$nom','$cat','$desc', '$ex', '$prec', '$imgContent')";
+                $sql = "INSERT INTO productos (idproducto, nombre, categoria, descripcion, precio, descuento, existencia, imagen) VALUES ('$id', '$nom', '$cat', '$desc', '$prec', '0', '$ex', '$imgContent')";
                 $conexion->query($sql);  //aplicamos sentencia que inserta datos en la tabla usuarios de la base de datos
                 if ($conexion->affected_rows >= 1){ //revisamos que se inserto un registro
                     echo '<script> alert("registro insertado") </script>';
@@ -44,8 +37,8 @@
              
               //continaumos con la consulta de datos a la tabla usuarios
          //vemos datos en un tabla de html
-         $sql = 'select * from productos';//hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
-         $resultado = $conexion -> query($sql); //aplicamos sentencia
+         $sql2 = 'select * from productos';//hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
+         $resultado = $conexion -> query($sql2); //aplicamos sentencia
 
          if ($resultado -> num_rows){ //si la consulta genera registros
               echo '<div style="margin-left: 20px;">';
@@ -62,7 +55,7 @@
                 echo '</tr>';
                 while( $fila = $resultado -> fetch_assoc()){ //recorremos los registros obtenidos de la tabla
                     echo '<tr>';
-                        echo '<td>'. $fila['Idprod'] . '</td>';
+                        echo '<td>'. $fila['idproducto'] . '</td>';
                         echo '<td>'. $fila['nombre'] . '</td>';
                         echo '<td>'. $fila['categoria'] . '</td>';
                         echo '<td>'. $fila['descripcion'] . '</td>';
@@ -126,7 +119,7 @@
                     </div>
                     <div class="form-group">
                         <label for="existencia">Existencia</label>
-                        <input type="text" id="existencia" name="existencia" class="form-control" placeholder=" ">
+                        <input type="number" id="existencia" name="existencia" class="form-control" placeholder=" ">
                     </div>
                     <div class="form-group">
                         <label for="precio">Precio</label>
