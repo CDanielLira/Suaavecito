@@ -9,13 +9,14 @@
         $sql2 = "INSERT INTO carrito (idus, idprod) VALUES ('$usuario', '$idprod') ";
         $conexion -> query($sql2);
         if ($conexion->affected_rows >= 1){ //revisamos que se inserto un registro
-                //echo '<script> alert("registro insertado") </script>';
+        
         }//fin
         $existencia = $conexion -> query("Select existencia from productos where idproducto='$idprod'");
         $existencia = $existencia->fetch_assoc();
         $existencia = $existencia['existencia'];
         $existencia--;
         $conexion->query("UPDATE productos SET existencia='" .$existencia . "' WHERE idproducto='" . $idprod . "';");
+        echo "<script>setTimeout(\"location.href='tienda.php?cat=" .$_GET['cat']. "'\",1)</script>";
     }
     if(!empty($_GET['cat'])){
         $cat = $_GET['cat'];
@@ -24,8 +25,18 @@
         $cat = "Todos";
     }
 ?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<style>
+    .efecto:hover{
+    transform: scale(1.3);
+ }
+ .efecto{
+     transition:all 0.3s ease 0s;
+ }
+</style> 
+</head>
 
 <body>
     <p id="categ" hidden><?php echo $cat?></p>
@@ -85,7 +96,7 @@
             </script>
             <div class="card" style="width: 22rem; margin: 0 auto;">
             
-                <img id="<?php echo $id ?>" onclick="vista(this.id)" class="card-img-top" width="16rem" src="data:imagen/jpeg;base64,<?php echo base64_encode($fila['imagen']);?>" />
+                <img id="<?php echo $id ?>" onclick="vista(this.id)" class="card-img-top efecto" width="16rem" src="data:imagen/jpeg;base64,<?php echo base64_encode($fila['imagen']);?>" />
                 <div>
                     <h5><?php 
                         if($descuento == 0)

@@ -138,7 +138,7 @@
         <!--Cambiar a disabled para que se active el captcha-->
         <div class="row">
             <div class="offset-md-4 col-2">
-                <button type="submit" class="btn btn-outline-primary" id="botonIngresar" value="submit" name="submit" disabled>Ingresar</button> 
+                <button type="submit" class="btn btn2 btn-outline-primary" id="botonIngresar" value="submit" name="submit" disabled>Ingresar</button> 
             </div>
             <br>
             <br> 
@@ -155,8 +155,19 @@
             echo "<a href='logout.php'>Cerrar sesi&oacute;n</a>";
         }
     ?>
+    
+   
+    <style>
+        .btn2 {
+             background-color: white;
+        }
+        .btn2:hover {
+            color:white;
+            background-color: #6193e8;
+        }
+    </style>
+    
 </body>
-
 </html>
 <?php
 require "footer.html";

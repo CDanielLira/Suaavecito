@@ -54,13 +54,21 @@
     <br>
     <br>
 	<div id="boton">
-      <button type="button" class="btn btn-outline-primary" onclick="printmsg()" >Verificar</button>  
+      <button type="button"  class="btn btn2 btn-outline-primary" onclick="printmsg()" >Verificar</button>  
     </div>
     
 	<p id="key"></p>
 
-
-
+    <style>
+        .btn2 {
+             background-color: white;
+        }
+        .btn2:hover {
+            color:white;
+            background-color: #6193e8;
+        }
+    </style>
+    
 </body>
 
 </html>
