@@ -48,15 +48,7 @@
                     </div>
                 </div>
                 <br>
-                <h3 class="titulos">Vision</h3>
-                <pre>"Nuestra vision es proporcionar la cultura y tradicion del mundo".</pre>
-                <br>
-                <img src="img/paises.jpg" alt="" class="item2">
-                <br><br>
-                <h3 class="titulos">Objetivo</h3>
-                <pre>"Nuestro objetivo es ser la tienda de licores y vinos en linea mas grande del mundo".
-                </pre>
-                <br>
+               
                 <img src="" alt="" class="item3">
 
             </div>
