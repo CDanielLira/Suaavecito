@@ -144,3 +144,6 @@
     <br><br>
 </body>
 </html>
+<?php
+require "footer.html";
+?>
