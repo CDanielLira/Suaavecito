@@ -22,20 +22,35 @@
     
 
 ?>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <body>
     <div class="cate">
         <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link disabled">Todos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="licores.php">Licores</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vinos.php">Vinos</a>
-          </li>
+            <li class="nav-item">
+                <?php
+                if($cat == "Todos")
+                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Todos' role='button'>Todos</a>";
+                else
+                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Todos' role='button'>Todos</a>";
+            ?>
+            </li>
+            <li class="nav-item">
+                <?php
+                if($cat == "Licores")
+                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Licores' role='button'>Licores</a>";
+                else
+                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Licores' role='button'>Licores</a>";
+            ?>
+            </li>
+            <li class="nav-item">
+                <?php
+                if($cat == "Vinos")
+                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Vinos' role='button'>Vinos</a>";
+                else
+                    echo "<a class='btn btn-outline-danger' href='tienda.php?cat=Vinos' role='button'>Vinos</a>";
+            ?>
+            </li>
         </ul>
     </div>
     
@@ -68,7 +83,7 @@
                         <?php
                             echo "<h5>Disponibles: " . $existencia . "</h5>";
 							if(!empty($_SESSION['id']) && $existencia > 0){
-								?><button class="btn btn-primary" onclick="agregar()">Agregar al carrito</button><?php
+								?><button class="btn btn-outline-danger" onclick="agregar()">Agregar al carrito</button><?php
 							}
 							else if(!empty($_SESSION['id']) && $existencia <= 0){
 								?><button class="btn btn-secondary">No disponible</button><?php
