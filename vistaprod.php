@@ -38,6 +38,7 @@
                 $nombre = $fila['nombre'];
                 $precio = $fila['precio'];
                 $imagen = $fila['imagen'];
+                $descuento = $fila['descuento'];
                 $des = $fila['descripcion'];
                 $existencia = $fila['existencia'];
         ?>
@@ -49,9 +50,15 @@
                     <div class="col-md-5">
                       <div class="card-body">
                         <h5 class="card-title" style>-<?php echo $nombre ?></h5>
-                        
                         <p class="card-text"><?php echo $des ?></p>
-                        <p class="card-text"><strong>$<?php echo $precio ?></strong> 
+                        <h5><?php 
+                        if($descuento == 0)
+                            echo '$' . $precio;
+                        else {
+                            echo "<span style='text-decoration:line-through;'>$". $precio ."</span>";
+                            echo " $" . $precio - $descuento;
+                        }
+                    ?></h5>
                         <?php
                             echo "<h5>Disponibles: " . $existencia . "</h5>";
 							if(!empty($_SESSION['id']) && $existencia > 0){

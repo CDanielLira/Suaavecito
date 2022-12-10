@@ -1,4 +1,11 @@
 <?php include "navbar.php";
+    if($_POST['tarjeta'] == "OXXO" && !empty($_POST['cupon'])) {
+        echo "<script>setTimeout(\"location.href='pago_oxxo.php?cupon=".$_POST['cupon']."'\",1)</script>";
+    }
+    else if($_POST['tarjeta'] == "OXXO") {
+        echo "<script>setTimeout(\"location.href='pago_oxxo.php'\",1)</script>";
+    }
+
     $sql = "select * from carrito where idus = '$usuario'";
     $resultado = $conexion -> query($sql);
     $total = 0;
@@ -8,6 +15,7 @@
         $resultado3 = $conexion -> query($sql3);
         while( $fila2 = $resultado3 -> fetch_assoc()){
             $total += $fila2['precio'];
+            $total -= $fila2['descuento'];
         }
     }//fin while
 
@@ -25,7 +33,7 @@
 <body>
     <header>
     <div class="contenedor">
-        <form action="examen.php">
+        <form action="realizarpago.php">
            <div class="row">
                <h3 class="product">PAGO CON TARJETA <?php echo $_POST['tarjeta']?></h3>
                <p>Usted esta realizando la compra de sus <b>productos</b></p>
@@ -97,8 +105,9 @@
                                     echo "¡Tienes envío gratuito!";
                                 }
                                 else {
-                                    echo "¡Añade $" . 299 - $total . " más a tu carrito para tener envío gratuito!";
-                                    $total += 99;
+                                    echo "¡Añade $" . 299 - $total . " más a tu carrito para tener envío gratuito!<br>";
+                                    echo "Total sin envío: $" . $total . " Envío: $100 Total: $" . $total+100;
+                                    $total += 100;
                                 }
                             ?></h6>
                         </div>
@@ -148,6 +157,9 @@
                                     echo "<span><h5>$". $total ."</h5></span>";
                                 }
                             ?></h6>
+                            <h5><?php
+                                echo "Total con impuestos (16%): <b>$" . $total*1.16 . "</b>";
+                            ?></h5>
                         </div>
                     </div>
                 </div>
